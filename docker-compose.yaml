@@ -1,0 +1,49 @@
+version: '3.1'
+
+services:
+  frontend:
+    container_name: ch-frontend
+    build:
+      context: ./src/frontend
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - /app/node_modules
+      - ./src/frontend:/app
+  backend:
+    container_name: ch-backend
+    build:
+      context: ./src/backend
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 5000:5000
+    environment:
+      DB_HOST: database
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_NAME: postgres
+    depends_on:
+      - database
+    links:
+      - database
+    volumes:
+      - /app/node_modules
+      - ./src/backend:/app
+  database:
+    container_name: postgres
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - "/var/lib/postgresql/data"
+    ports:
+      - "5432:5432"
+volumes:
+  postgres:
+    driver: local
