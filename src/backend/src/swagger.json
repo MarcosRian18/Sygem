@@ -1,0 +1,268 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "API Gerenciamento de Cargos",
+      "description": "API que gerencia as posições e cadastra novos usuários/funcionários.",
+      "version": "1.0",
+      "contact": {
+        "name": "Marcos Rian Nascimento Silva",
+        "email": "marcosrian.silva@dataprev.gov.br"
+      }
+    },
+    "servers": [
+        {
+            "url": "http://localhost:5000",
+            "description": "Link da API"
+        }
+    ],
+    "basePath": "/",
+    
+    "definitions": {
+      "create_funcionario": {
+        "type": "object",
+        "propertiers": {
+          "id": {
+            "type": "integer"
+          },
+          "nome": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "paths": {
+      
+      "/create_funcionario": {
+        "post": {
+          "tags": ["Funcionarios"],
+          "summary": "Essa rota é responsável pela criação do funcionário através do formulário",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "propertiers": {
+                    "$ref": "#/definitions/cadastro"
+                  },
+                  "example": {
+                    "id": 0,
+                    "nome": "Marcos Rian Nascimento Silva",
+                    "cpf": "709.184.671-01",
+                    "telefone": "(61) 99145-9161",
+                    "cargo": "Estágiario",
+                    "setor": "Departamento de Tecnologia",
+                    "dt_nascimento": "02/12/2001"
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Usuário cadastrado com Sucesso!",
+              "content":{
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "propertiers": {
+                      "message": {
+                      "type": "string"
+                      }
+                    },
+                    "example": "Usuário Cadastrado com sucesso!"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Erro, Sintaxe Inválida!",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "propertiers": {
+                      "message": {
+                        "type": "string"
+                      }
+                    },
+                    "example": "ERRO, Os dados estão incorretos, verifique novamente..."             
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not Found",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "propertiers": {
+                      "message": {
+                        "type": "string"
+                      }
+                    },
+                    "example": "O servidor não pode encontrar o recurso solicitado"
+                  }
+                }
+              }
+            }
+          }   
+      }
+    },
+    "/lista_funcionario": {
+      "get": {
+        "summary": "Essa rota é responsável pela listagem de todos os usuários cadastrados no sistema.",
+        "tags": ["Funcionarios"],
+        "responses": {
+          "200": {
+            "descriptions": "Lista de Usuários",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type":  "Array",
+                  "propertiers": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "nome": {
+                      "type": "string"
+                    },
+                    "cpf": {
+                      "type": "string"
+                    },
+                    "telefone": {
+                      "type": "string"
+                    },
+                    "cargo": {
+                      "type": "string"
+                    },
+                    "setor": {
+                      "type": "string"
+                    },
+                    "dt_nascimento": {
+                      "type": "string"
+                    },
+                    "nivel": {
+                      "type": "integer"
+                    }
+                  },
+                  "example": {
+                    "id": 0,
+                    "nome": "Marcos Rian Nascimento Silva",
+                    "cpf": "709.184.671-01",
+                    "telefone": "(61) 99145-9161",
+                    "cargo": "Estágiario",
+                    "setor": "Departamento de Tecnologia",
+                    "dt_nascimento": "02/12/2001",
+                    "nivel": 4
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/busca_funcionario": {
+      "get": {
+        "tags": ["Funcionarios"],
+        "summary": "Essa rota é responsável pela demonstração em destaque de determinados cargos..",
+        "parameters": [{
+          "name": "cpf",
+          "in": "query",
+          "description": "Digite o CPF para fazer a consulta.",
+          "required": true
+        }],
+        "responses": {
+          "200": {
+            "descriptions": "Lista de Usuários em cargos semelhantes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type":  "Array",
+                  "propertiers": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "nome": {
+                      "type": "string"
+                    },
+                    "cpf": {
+                      "type": "string"
+                    },
+                    "telefone": {
+                      "type": "string"
+                    },
+                    "cargo": {
+                      "type": "string"
+                    },
+                    "setor": {
+                      "type": "string"
+                    },
+                    "dt_nascimento": {
+                      "type": "string"
+                    },
+                    "nivel": "integer"
+                  },
+                  "example": {
+                    "nome": "Marcos Rian Nascimento Silva",
+                    "cpf": "709.184.671-01",
+                    "cargo": "Estágiario",
+                    "setor": "Departamento de TI"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/setores": {
+      "get": {
+        "tags": ["Funcionarios"],
+        "summary": "Essa rota é responsável pela listagem de todos os setores da empresa.",
+        "responses": {
+          "200": {
+            "descriptions": "Lista de Usuários em cargos semelhantes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type":  "Array",
+                  "propertiers": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "nome": {
+                      "type": "string"
+                    },
+                    "cpf": {
+                      "type": "string"
+                    },
+                    "telefone": {
+                      "type": "string"
+                    },
+                    "cargo": {
+                      "type": "string"
+                    },
+                    "setor": {
+                      "type": "string"
+                    },
+                    "dt_nascimento": {
+                      "type": "string"
+                    }
+                  },
+                  "example": {
+                    "nome": "Marcos Rian Nascimento Silva",
+                    "cpf": "709.184.671-01",
+                    "setor": "Departamento de Tecnologia"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+/*Primeiro exemplo de consulta por cpf ou nome*/
+/*
+ try {
+            return  knex.select('id','nome','cpf','telefone','email',
+            'cargo','setor','dt_nascimento','nivel').from('funcionarios')
+            .where('cpf', cpf_funcionario).union(function(){
+                this.select('*').from('funcionarios')
+            }).orderBy('nivel', 'desc')
+
+            const select1 = knex.select('id','nome','cpf','telefone','email',
+            'cargo','setor','dt_nascimento','nivel').from('funcionarios').where('cpf', cpf_funcionario)
+            const select2 = knex.select('*').from('funcionarios').where('nivel',nivel)
+
+            knex.union()
+        } catch (error) {
+            console.log(error.message)
+        }
+*/

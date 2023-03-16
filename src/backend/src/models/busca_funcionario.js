@@ -3,17 +3,17 @@ const knex = require('knex')(knexfile)
 
 module.exports = {
     get_busca_funcionario: (cpf_funcionario)=>{
+       
         try {
-            var query = knex.select('id','nome','cpf','telefone','email','cargo','setor','dt_nascimento').from('funcionarios').where('cpf', cpf_funcionario).orderBy("")
-            var query2 = knex.select('*').from('funcionarios')
-           
-            console.log(query, query2)
-            return query,query2
+        const cpfPesquisado = cpf_funcionario;
 
+        return knex('funcionarios')
+        .select('*')
+        .orderByRaw(`cpf = '${cpfPesquisado}' DESC, nivel ASC`)
+        
         } catch (error) {
-            console.log(error.message)
+            console.log(error)
         }
         
     }
 }
-
