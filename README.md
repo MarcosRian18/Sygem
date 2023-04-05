@@ -15,7 +15,6 @@
             Eu, como administrador do sistema, gostaria de pesquisar o nome de um empregado e visualizá-lo em destaque na hierarquia da empresa.
         </p>
     </li>
-
     <li>
         <p>
             Eu, como administrador do sistema, gostaria de visualizar os empregados de uma área.
