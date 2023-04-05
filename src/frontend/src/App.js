@@ -4,7 +4,7 @@ import Header from "./components/layouts/Header";
 import Home from "./components/pages/Home";
 import Funcionarios from "./components/pages/Funcionarios"
 import BuscarFuncionario from "./components/pages/BuscarFuncionario"
-import Contato from "./components/pages/Contato"
+import Setores from "./components/pages/Setores"
 import Sobre from "./components/pages/Sobre"
 
 import Footer from "./components/layouts/Footer"
@@ -15,9 +15,9 @@ export default function App() {
          <Header />
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path="/funcionarios" element={<Funcionarios />}/>
+          <Route path="/create_funcionario" element={<Funcionarios />}/>
           <Route path="/busca_funcionario" element={<BuscarFuncionario />}/>
-          <Route path="/contato" element={<Contato />}/>
+          <Route path="/setores" element={<Setores />}/>
           <Route path="/sobre" element={<Sobre />}/>
         </Routes>
         <Footer />

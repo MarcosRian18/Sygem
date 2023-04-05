@@ -52,9 +52,6 @@ function Home(){
             </div>
         </div>
         
-        
-        //FAZER MUDANÇAS DE IMAGENS E CARROUSEL OU IMAGENS BACKGROUND
-        
     )
 }
 
