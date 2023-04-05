@@ -6,7 +6,7 @@ function Header() {
     <>
     <Navbar bg="dark" variant="dark" expand="lg">
         <Container>
-          <Navbar.Brand className="menu" href="/">CH-TECH</Navbar.Brand>
+          <Navbar.Brand className="menu" href="/">SYGEM</Navbar.Brand>
           <Nav className="ml-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/create_funcionario">Funcionarios</Nav.Link>

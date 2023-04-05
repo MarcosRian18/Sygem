@@ -11,10 +11,11 @@ function Home(){
     return(
         <div className='body'>
             <div className='container-top'>
-                <h1>Company Hard</h1>
-                <p> A sua companhia sem organização é um mal sem comparação!</p>
+                <h1> Sistema de Gerenciamento Empresarial</h1>
+                <p> A sua Empresa sem organização é um mal sem comparação!</p>
                 <p>Com este sistema você é capaz de ter esse controle
-                de volta, aonde você tem total poder de criar novos cadastros de seus usuários e gerenciar, tendo assim mais organização e agilidade no processo de cadastrar ou consultar algum empregado.</p>
+                de volta, aonde você tem total poder de criar novos cadastros de seus usuários e gerenciar, tendo assim mais organização e agilidade no 
+                processo de cadastrar ou consultar algum empregado na sua empresa.</p>
             </div>
             <div className='container-bottom'>
             <Card className='cards' style={{ width: '18rem' }}>
