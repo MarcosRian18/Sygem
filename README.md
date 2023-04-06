@@ -53,14 +53,14 @@
 </ul>
 
 <h2>Comando para clonar o projeto</h2>
-<blockquote> docker-compose up </blockquote>
+<blockquote> git clone https://gitlab.labgovcloud/Marcos_Rian/aplicacao-docker.git </blockquote>
 
 <h2>Comando para rodar aplicação</h2>
 <blockquote> docker-compose up </blockquote>
 
-<h3> Para visualizar a documentação da API Rest (Swagger). Acesse o link :</h3>
-http://localhost:3333/api-docs
+<h3> Link para acessar a documentação do Swagger.</h3>
+http://localhost:5000/api-docs
 
-<h3> Para visualizar a aplicação acesse :</h3>
+<h3> Link para ter acesso a aplicação</h3>
 http://localhost:3000
 
