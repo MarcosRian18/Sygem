@@ -21,3 +21,7 @@
         </p>
     </li>
 </ul>
+<h2>Arquitetura do Diagrama</h2>
+<img src="./diagrams/diagrama.png" width="800" height="500">
+
+
