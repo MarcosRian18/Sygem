@@ -22,6 +22,6 @@
     </li>
 </ul>
 <h2>Arquitetura do Diagrama</h2>
-<img src="./diagrams/diagrama.png" width="800" height="500">
-
-
+<div style="text-align:center;">
+  <img src="./diagrams/APP-Diagram.jpg" alt="..." width="800" height="600">
+</div>
