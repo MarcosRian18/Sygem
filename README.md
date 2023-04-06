@@ -25,3 +25,42 @@
 <div style="text-align:center;">
   <img src="./diagrams/APP-Diagram.jpg" alt="..." width="800" height="600">
 </div>
+
+<p>Na definição da figura acima temos os 3 containers com as respectivas ferramentas.</p>
+<h2>Container Front-end</h2>
+<ul>
+    <li><p>Aplicação Node.js</p></li>
+    <li><p>React.js</p></li>
+    <li><p>Vis.js</p></li>
+</ul>
+<h2>Container Back-end</h2>
+<ul>
+    <li><p>Aplicação Node.js</p></li>
+    <li><p>Express.js</p></li>
+    <li><p>Swagger.js</p></li>
+</ul>
+<h2>Container Banco de dados</h2>
+<ul>
+    <li><p>PostgreSQL</p></li>
+</ul>
+
+
+<h2> Requisitos para rodar a aplicação </h2>
+<ul>
+    <li> <p> Docker </p> </li>
+    <li> <p> Docker Compose </p> </li>
+    <li> <p> npm install </p> </li>
+</ul>
+
+<h2>Comando para clonar o projeto</h2>
+<blockquote> docker-compose up </blockquote>
+
+<h2>Comando para rodar aplicação</h2>
+<blockquote> docker-compose up </blockquote>
+
+<h3> Para visualizar a documentação da API Rest (Swagger). Acesse o link :</h3>
+http://localhost:3333/api-docs
+
+<h3> Para visualizar a aplicação acesse :</h3>
+http://localhost:3000
+
