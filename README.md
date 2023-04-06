@@ -58,6 +58,16 @@
 <h2>Comando para rodar aplicação</h2>
 <blockquote> docker-compose up </blockquote>
 
+<h2>Pré-configuração</h2>
+<p>entre no container do back-end usando o comando:</p>
+<blockquote>docker exec -it "containerid" /bin/bash</blockquote>
+
+<p>Ao entrar no container execute o comando:</p>
+<blockquote>npx knex migrate:latest</blockquote>
+
+<p>Feito a migrate, saia do container através do atalho CTRL + D, após isso, pode continuar com a aplicação e usar o formulário.</p>
+
+
 <h3> Link para acessar a documentação do Swagger.</h3>
 http://localhost:5000/api-docs
 
