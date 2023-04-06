@@ -23,8 +23,8 @@ function Home(){
                 <Card.Body>
                     <Card.Title>Companhia</Card.Title>
                     <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                    Sua companhia vai ser vista e gerenciada de forma diferente do que 
+                    estamos acostumados no nosso dia a dia, chega de Prancheta ou papelada, use o SYGEM.
                     </Card.Text>
                 </Card.Body>
             </Card>
@@ -34,8 +34,8 @@ function Home(){
                 <Card.Body>
                     <Card.Title>Organização</Card.Title>
                     <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                    Em um ambiente de trabalho organizado, cada colaborador é como uma peça fundamental
+                     em uma engrenagem, contribuindo de forma eficiente para que a empresa alcance seus objetivos.
                     </Card.Text>
                 </Card.Body>
             </Card>
@@ -45,8 +45,8 @@ function Home(){
                 <Card.Body>
                     <Card.Title>Controle</Card.Title>
                     <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                    você diretor da sua empresa, terá o controle que muitos não tem, na palma da sua mão,
+                     tenha o poder de controlar qualquer informação na sua empresa quando se trata de funcionarios e suas respectivas informações.
                     </Card.Text>
                 </Card.Body>
             </Card>

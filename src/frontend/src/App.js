@@ -6,7 +6,6 @@ import Funcionarios from "./components/pages/Funcionarios"
 import BuscarFuncionario from "./components/pages/BuscarFuncionario"
 import Setores from "./components/pages/Setores"
 import Sobre from "./components/pages/Sobre"
-
 import Footer from "./components/layouts/Footer"
 
 export default function App() {

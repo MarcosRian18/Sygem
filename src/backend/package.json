@@ -17,6 +17,7 @@
     "net-tools": "^1.0.1",
     "nodemon": "^2.0.21",
     "pg": "^8.10.0",
+    "react-vis-network-graph": "^3.0.1",
     "swagger-ui-express": "^4.6.2"
   }
 }

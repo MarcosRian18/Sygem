@@ -10,7 +10,6 @@ module.exports = {
             })
         } catch (error) {
             console.log('O erro é esse: ',error.message)
-        }
-        
+        }    
     }
 }

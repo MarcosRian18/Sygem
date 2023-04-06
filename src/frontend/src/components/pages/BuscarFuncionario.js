@@ -5,13 +5,12 @@ function BuscarFuncionario(){
   
   const [funcionarios, setFuncionarios] = useState([])
   const [cpf, setCpf] = useState()
+
   useEffect(() => {
     fetch(`http://localhost:5000/busca_funcionario?cpf=${cpf}`).then(res => res.json()).then((res)=>{
       setFuncionarios(res)
     })
   })
-  
-  
   
   
   return(

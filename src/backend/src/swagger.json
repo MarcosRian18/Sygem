@@ -18,20 +18,34 @@
     "basePath": "/",
     
     "definitions": {
-      "create_funcionario": {
+      "cadastro": {
         "type": "object",
-        "propertiers": {
-          "id": {
-            "type": "integer"
-          },
+        "properties": {
           "nome": {
             "type": "string"
+          },
+          "cpf": {
+            "type": "string"
+          },
+          "telefone": {
+            "type": "string"
+          },
+          "cargo": {
+            "type": "string"
+          },
+          "setor": {
+            "type": "string"
+          },
+          "dt_nascimento": {
+            "type": "string"
+          },
+          "nivel": {
+            "type": "integer"
           }
         }
       }
     },
-    "paths": {
-      
+    "paths": {    
       "/create_funcionario": {
         "post": {
           "tags": ["Funcionarios"],
@@ -42,17 +56,41 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "propertiers": {
-                    "$ref": "#/definitions/cadastro"
+                  "properties": {
+                    "nome": {
+                      "type": "string"
+                    },
+                    "cpf": {
+                      "type": "string"
+                    },
+                    "telefone": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "cargo": {
+                      "type": "string"
+                    },
+                    "setor": {
+                      "type": "string"
+                    },
+                    "dt_nascimento": {
+                      "type": "string"
+                    },
+                    "nivel": {
+                      "type": "integer"
+                    }
                   },
                   "example": {
-                    "id": 0,
                     "nome": "Marcos Rian Nascimento Silva",
                     "cpf": "709.184.671-01",
                     "telefone": "(61) 99145-9161",
+                    "email": "teste@gmail.com",
                     "cargo": "Estágiario",
                     "setor": "Departamento de Tecnologia",
-                    "dt_nascimento": "02/12/2001"
+                    "dt_nascimento": "02/12/2001",
+                    "nivel": 2
                   }
                 }
               }
@@ -65,7 +103,7 @@
                 "application/json": {
                   "schema": {
                     "type": "object",
-                    "propertiers": {
+                    "properties": {
                       "message": {
                       "type": "string"
                       }
@@ -81,7 +119,7 @@
                 "application/json": {
                   "schema": {
                     "type": "object",
-                    "propertiers": {
+                    "properties": {
                       "message": {
                         "type": "string"
                       }
@@ -97,7 +135,7 @@
                 "application/json": {
                   "schema": {
                     "type": "object",
-                    "propertiers": {
+                    "properties": {
                       "message": {
                         "type": "string"
                       }
@@ -122,9 +160,6 @@
                 "schema": {
                   "type":  "Array",
                   "propertiers": {
-                    "id": {
-                      "type": "integer"
-                    },
                     "nome": {
                       "type": "string"
                     },
@@ -148,7 +183,6 @@
                     }
                   },
                   "example": {
-                    "id": 0,
                     "nome": "Marcos Rian Nascimento Silva",
                     "cpf": "709.184.671-01",
                     "telefone": "(61) 99145-9161",
@@ -224,38 +258,21 @@
         "summary": "Essa rota é responsável pela listagem de todos os setores da empresa.",
         "responses": {
           "200": {
-            "descriptions": "Lista de Usuários em cargos semelhantes",
+            "description": "Lista de setores da empresa",
             "content": {
               "application/json": {
                 "schema": {
-                  "type":  "Array",
-                  "propertiers": {
-                    "id": {
-                      "type": "integer"
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "nome": {
+                        "type": "string"
+                      }
                     },
-                    "nome": {
-                      "type": "string"
-                    },
-                    "cpf": {
-                      "type": "string"
-                    },
-                    "telefone": {
-                      "type": "string"
-                    },
-                    "cargo": {
-                      "type": "string"
-                    },
-                    "setor": {
-                      "type": "string"
-                    },
-                    "dt_nascimento": {
-                      "type": "string"
+                    "example": {
+                      "nome": "Departamento de Tecnologia"
                     }
-                  },
-                  "example": {
-                    "nome": "Marcos Rian Nascimento Silva",
-                    "cpf": "709.184.671-01",
-                    "setor": "Departamento de Tecnologia"
                   }
                 }
               }
@@ -264,5 +281,6 @@
         }
       }
     }
+    
   }
 }

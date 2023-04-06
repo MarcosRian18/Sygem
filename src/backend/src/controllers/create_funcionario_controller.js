@@ -50,7 +50,7 @@ module.exports = {
           dt_nascimento,
           nivel
         ); 
-        return res.status(201).json(dado_funcionario);
+        return res.status(201).json("Usuário Cadastrado com sucesso");
       } catch (err) {
           return res.status(500).json({
             error: "Internal Server Error",
