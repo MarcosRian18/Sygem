@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 
+//Defino o Componente
 function Funcionarios() {
+  //Defino o estado inicial do formulário, com as propriedades do funcionário vazio.
   const [formValues, setFormValues] = useState({
     nome: "",
     cpf: "",
@@ -13,10 +15,13 @@ function Funcionarios() {
     nivel: "",
   });
 
+  //Define o estado inicial da verificação do CPF como verdadeiro
   const [cpfValid, setCpfValid] = useState(true);
-
+  
+  //Função que atualiza o estado do formulário quando o usuário inserir texto nos campos
   function handleChange(event) {
     const { name, value } = event.target;
+    //Atualiza o estado do formulario com o novo valor do campo alterado,
     setFormValues({ ...formValues, [name]: value });
 
     if (name === "cpf") {
@@ -25,6 +30,7 @@ function Funcionarios() {
     }
   }
 
+  //Função que é executado quando o usuário envia o cadastro
   function handleSubmit(event) {
     event.preventDefault();
 
@@ -33,6 +39,7 @@ function Funcionarios() {
       return;
     }
 
+    //Define as opções para a requisição POST
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -52,6 +59,7 @@ function Funcionarios() {
       });
     }
 
+    //Envia a requisição para a API e trata a resposta
     fetch("http://localhost:5000/create_funcionario", options)
       .then((res) => {
         if(res.ok){

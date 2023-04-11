@@ -6,6 +6,7 @@ function BuscarFuncionario(){
   const [funcionarios, setFuncionarios] = useState([])
   const [cpf, setCpf] = useState()
 
+  //Realiza a busca do funcionário no banco de dados sempre que houver uma mudança no cpf
   useEffect(() => {
     fetch(`http://localhost:5000/busca_funcionario?cpf=${cpf}`).then(res => res.json()).then((res)=>{
       setFuncionarios(res)

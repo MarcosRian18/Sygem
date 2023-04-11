@@ -5,10 +5,14 @@ module.exports = {
     try {
         const setores = await model.get_setores();
         const funcionarios = await model.get_funcionarios();
+        
+        // Cria um array de objetos 'nodes' contendo as informações de cada setor retornado na consulta.
         const nodes = setores.map(setor => ({
             id: setor.setor, 
             label: setor.setor
         }));
+
+        // Cria um array de objetos 'edges' contendo as informações de cada funcionário retornado na consulta.
         const edges = funcionarios.map(funcionario => ({
             from: funcionario.setor, 
             to: funcionario.nome
