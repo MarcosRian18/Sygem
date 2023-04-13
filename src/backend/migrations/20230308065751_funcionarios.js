@@ -9,7 +9,8 @@ exports.up = function(knex) {
     table.string('setor').notNullable();
     table.string('cargo').notNullable();
     table.string('dt_nascimento').notNullable();
-    table.integer('nivel').notNullable();
+    table.string('nivel').notNullable();
+
   })
 };
 

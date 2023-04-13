@@ -10,8 +10,8 @@ module.exports = {
       email,
       setor,
       cargo,
-      dt_nascimento,
-      nivel,
+      dt_nascimento, 
+      nivel
     } = req.body;
 
     if (
@@ -29,8 +29,8 @@ module.exports = {
       cargo == " " ||
       dt_nascimento == null ||
       dt_nascimento == " " ||
-      nivel == null ||
-      nivel == " "
+      nivel == " " ||
+      nivel == null
     ) {
       res
         .status(400)

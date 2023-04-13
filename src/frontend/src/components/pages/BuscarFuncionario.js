@@ -37,7 +37,6 @@ function BuscarFuncionario(){
                 <th>Setor</th>
                 <th>Cargo</th>
                 <th>Data de Nascimento</th>
-                <th>Nivel</th>
               </tr>
             </thead>
             <tbody>
@@ -51,7 +50,6 @@ function BuscarFuncionario(){
                     <td>{funcionario.setor}</td>
                     <td>{funcionario.cargo}</td>
                     <td>{funcionario.dt_nascimento}</td>
-                    <td>{funcionario.nivel}</td>
                   </tr>
                 
                 )}

@@ -20,7 +20,7 @@ module.exports = {
         setor: setor,
         cargo: cargo,
         dt_nascimento: dt_nascimento,
-        nivel: nivel,
+        nivel: nivel
       }
 
       const inserted = await knex('funcionarios').insert(dado_funcionario);
