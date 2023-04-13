@@ -48,8 +48,8 @@
 <h2> Requisitos para rodar a aplicação </h2>
 <ul>
     <li> <p> Docker </p> </li>
-    <li> <p> Docker Compose </p> </li>
-    <li> <p> npm install </p> </li>
+    <li> <p> Docker-Compose </p> </li>
+
 </ul>
 
 <h2>Comando para clonar o projeto</h2>
